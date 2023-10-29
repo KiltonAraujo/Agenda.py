@@ -32,9 +32,13 @@ class ManterClienteUI():
         else:
             dados = []
             for obj in clientes:
-                dados.append(obj.__dict__)
+                id = obj.get_id()
+                nome = obj.get_nome() 
+                email = obj.get_email()
+                fone = obj.get_fone()
+                dados.append([id, nome, email, fone])
 
-            df = pd.DataFrame(dados)
+            df = pd.DataFrame(dados, columns=["id", "Nome", "E-mail", "Telefone"])
             st.dataframe(df)
 
     def atualizar():
