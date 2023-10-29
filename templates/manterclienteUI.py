@@ -5,7 +5,7 @@ import time
 
 class ManterClienteUI():
     def main():
-        st.header("Cadastro para clientes!")
+        st.header("Cadastro de clientes!")
         tab1, tab2, tab3, tab4 = st.tabs(["Listar", "Inserir", "Atualizar", "excluir"])
         with tab1: ManterClienteUI.listar()
         with tab2: ManterClienteUI.inserir()
